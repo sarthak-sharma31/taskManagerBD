@@ -20,7 +20,7 @@ const registerUser = async (req, res) => {
         }
 
         if (!profileImageUrl) {
-            profileImageUrl = "http://localhost:3000/uploads/1769959202499-03ebd625cc0b9d636256ecc44c0ea324.jpg";
+            profileImageUrl = "http://taskmanagerbd-production.up.railway.app/uploads/1769964239681-03ebd625cc0b9d636256ecc44c0ea324.jpg";
         }
 
         let role = "member";
