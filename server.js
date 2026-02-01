@@ -25,6 +25,10 @@ app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
 app.use('/tasks', taskRoutes);
 
+app.get('/', (req, res)=>{
+    res.send("Hello from server!!")
+});
+
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.listen(port, () => {
