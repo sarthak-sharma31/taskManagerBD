@@ -19,10 +19,6 @@ const registerUser = async (req, res) => {
             return res.status(400).json({ message: "User already exists" });
         }
 
-        if (!profileImageUrl) {
-            profileImageUrl = "http://taskmanagerbd-production.up.railway.app/uploads/1769966250650-av4.jpg";
-        }
-
         let role = "member";
         if (
             adminInviteToken &&
