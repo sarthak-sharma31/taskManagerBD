@@ -72,7 +72,7 @@ const loginUser = async(req, res)=>{
             return res.status(400).json({message: "Incorrect Password"});
         }
 
-        return res.status(200).json({_id: user._id, name: user.name, email: user.email, role: user.role, profileImageUrl: user.profileImageUrl, token: generateToken(user._id)})
+        return res.status(200).json({_id: user._id, name: user.name, email: user.email, role: user.role, profileImageUrl: user.profileImageUrl, createdAt:user.createdAt, token: generateToken(user._id)})
 
     } catch (error) {
         return res.status(500).json({message: "Internal Server Error", error: error.message});
